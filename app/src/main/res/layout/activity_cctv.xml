@@ -1,0 +1,70 @@
+<!-- activity_cctv_control.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A4B0B6"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <SurfaceView
+            android:id="@+id/cctvSurfaceView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10sp"
+            android:layout_weight="1" />
+
+        <SurfaceView
+            android:id="@+id/cctvSurfaceView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10sp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <!-- 상하좌우 회전 버튼을 위한 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/buttonUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▲" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10sp"
+                android:text="◀" />
+
+            <Button
+                android:id="@+id/buttonRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:text="▶" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▼" />
+    </LinearLayout>
+</LinearLayout>
