@@ -4,7 +4,9 @@ import static com.example.homecctv.DatabaseHelper.COLUMN_ID;
 import static com.example.homecctv.DatabaseHelper.COLUMN_PASSWORD;
 import static com.example.homecctv.DatabaseHelper.TABLE_USERS;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -23,10 +26,20 @@ public class LoginActivity extends AppCompatActivity {
     private Button loginButton;
     private Button registerButton;
 
+    private static final int REQUEST_BLUETOOTH_PERMISSIONS = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login); // activity_login.xml을 사용합니다.
+
+        // 필요한 블루투스 권한 요청
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.BLUETOOTH_CONNECT}, REQUEST_BLUETOOTH_PERMISSIONS);
+        }
+
+
 
         databaseHelper = new DatabaseHelper(this);
 

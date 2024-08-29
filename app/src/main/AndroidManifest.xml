@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
 
 
     <application
@@ -16,6 +21,9 @@
         android:usesCleartextTraffic="true"
         android:networkSecurityConfig="@xml/security"
         tools:targetApi="31">
+
+
+
 
         <activity
             android:name=".LoginActivity"
@@ -32,7 +40,8 @@
         </activity>
         <activity
             android:name=".CCTVActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
 
         </activity>
         <activity
@@ -41,7 +50,11 @@
         </activity>
         <activity
             android:name=".CCTVControlActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
         </activity>
     </application>
 
