@@ -19,18 +19,18 @@ public class CCTVActivity extends AppCompatActivity {
         MyHomeCCTV cctvSurfaceView3 = findViewById(R.id.cctvSurfaceView3);
 
         // 각 뷰에 다른 URL 설정
-        cctvSurfaceView1.setStreamUrl("http://220.233.144.165:8888/mjpg/video.mjpg");
-        cctvSurfaceView2.setStreamUrl("http://192.168.0.109:8000/camera/mjpeg");
-        cctvSurfaceView3.setStreamUrl("http://63.142.183.154:6103/mjpg/video.mjpg");
+        cctvSurfaceView1.setStreamUrl("http://87.54.229.102/mjpg/video.mjpg");
+        cctvSurfaceView2.setStreamUrl("http://63.142.183.154:6103/mjpg/video.mjpg");
+        cctvSurfaceView3.setStreamUrl("http://87.54.229.102/mjpg/video.mjpg");
         //cctvSurfaceView2.setStreamUrl("http://192.168.0.109:8000/camera/mjpeg");
 
         // 첫 번째 CCTV 클릭 시
-        cctvSurfaceView1.setOnClickListener(v -> openCCTVControlActivity("http://220.233.144.165:8888/mjpg/video.mjpg"));
+        cctvSurfaceView1.setOnClickListener(v -> openCCTVControlActivity("http://87.54.229.102/mjpg/video.mjpg"));
 
         // 두 번째 CCTV 클릭 시
-        cctvSurfaceView2.setOnClickListener(v -> openCCTVControlActivity("http://192.168.0.109:8000/camera/mjpeg"));
+        cctvSurfaceView2.setOnClickListener(v -> openCCTVControlActivity("http://63.142.183.154:6103/mjpg/video.mjpg"));
 
-        cctvSurfaceView3.setOnClickListener(v -> openCCTVControlActivity("http://63.142.183.154:6103/mjpg/video.mjpg"));
+        cctvSurfaceView3.setOnClickListener(v -> openCCTVControlActivity("http://87.54.229.102/mjpg/video.mjpg"));
     }
 
 

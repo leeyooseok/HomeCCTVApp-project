@@ -40,5 +40,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+//    implementation ("com.google.cloud:google-cloud-dialogflow:2.0.0") // 적절한 버전을 사용하세요
+//    implementation ("com.squareup.okhttp3:okhttp:4.9.3")
+//    implementation ("com.google.code.gson:gson:2.10.1")
 
 }

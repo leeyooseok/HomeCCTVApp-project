@@ -25,34 +25,52 @@
     <!-- 상하좌우 회전 버튼을 위한 레이아웃 -->
     <LinearLayout
         android:layout_width="271dp"
-        android:layout_height="286dp"
+        android:layout_height="360dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:gravity="center"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/buttonBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|top"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:padding="10dp"
-            android:text="Back"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/startVoiceRecognitionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="right|top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="50dp"
+                android:text="MIC" />
+
+            <Button
+                android:id="@+id/buttonBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="right|top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Back"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp" />
+
+        </LinearLayout>
 
         <Button
             android:id="@+id/buttonUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
             android:text="▲" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:orientation="horizontal">
 
             <Button
@@ -74,7 +92,21 @@
             android:id="@+id/buttonDown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
             android:text="▼" />
+
+        <TextView
+            android:id="@+id/voiceCommandResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="음성 인식 결과가 여기에 표시됩니다."
+            android:textSize="18sp"
+            android:layout_below="@id/startVoiceRecognitionButton"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"/>
+
+
+
     </LinearLayout>
 </LinearLayout>
