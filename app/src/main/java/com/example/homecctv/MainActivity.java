@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-//        // 전등 제어 화면으로 이동
-//        lightControlButton.setOnClickListener(v -> {
-//            Intent intent = new Intent(MainActivity.this, LightControlActivity.class);
-//            startActivity(intent);
-//        });
-//
+        // 전등 제어 화면으로 이동
+        lightControlButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, LightControlActivity.class);
+            startActivity(intent);
+        });
+
 //        // 집안 온도 확인 화면으로 이동
 //        temperatureCheckButton.setOnClickListener(v -> {
 //            Intent intent = new Intent(MainActivity.this, TemperatureCheckActivity.class);
