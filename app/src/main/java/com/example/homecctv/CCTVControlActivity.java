@@ -60,10 +60,10 @@ public class CCTVControlActivity extends AppCompatActivity {
         Button buttonLeft = findViewById(R.id.buttonLeft);
         Button buttonRight = findViewById(R.id.buttonRight);
 
-        buttonUp.setOnClickListener(v -> sendCommand("U"));
-        buttonDown.setOnClickListener(v -> sendCommand("D"));
-        buttonLeft.setOnClickListener(v -> sendCommand("L"));
-        buttonRight.setOnClickListener(v -> sendCommand("R"));
+        buttonUp.setOnClickListener(v -> sendCommand('U'));
+        buttonDown.setOnClickListener(v -> sendCommand('D'));
+        buttonLeft.setOnClickListener(v -> sendCommand('L'));
+        buttonRight.setOnClickListener(v -> sendCommand('R'));
 
         //        bluetoothController = new BluetoothController(this);
 //
@@ -77,6 +77,7 @@ public class CCTVControlActivity extends AppCompatActivity {
 //        buttonDown.setOnClickListener(v -> bluetoothController.sendCommand("D"));
 //        buttonLeft.setOnClickListener(v -> bluetoothController.sendCommand("L"));
 //        buttonRight.setOnClickListener(v -> bluetoothController.sendCommand("R"));
+
         // 버튼 클릭 시 UDP 패킷으로 명령 전송
         voiceCommandResult = findViewById(R.id.voiceCommandResult);
         Button startVoiceRecognitionButton = findViewById(R.id.startVoiceRecognitionButton);
@@ -84,14 +85,14 @@ public class CCTVControlActivity extends AppCompatActivity {
         startVoiceRecognitionButton.setOnClickListener(v -> startVoiceRecognition());
     }
 
-    public void sendCommand(String msgText) {
+    public void sendCommand(char command) {
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try{
                     DatagramSocket ds = new DatagramSocket();
                     InetAddress ia=InetAddress.getByName(SERVER_IP);
-                    byte[] data = msgText.getBytes();
+                    byte[] data = new String(new char[]{command}).getBytes();
                     DatagramPacket dp = new DatagramPacket(data,data.length,ia,SERVER_PORT);
                     ds.send(dp);
                     ds.close();
@@ -138,7 +139,7 @@ public class CCTVControlActivity extends AppCompatActivity {
                     DatagramSocket ds = new DatagramSocket();
                     InetAddress ia=InetAddress.getByName(SERVER_IP);
                     byte[] data = msgText.getBytes();
-                    DatagramPacket dp = new DatagramPacket(data,data.length,ia,SERVER_PORT);
+                    DatagramPacket dp = new DatagramPacket(data,data.length,ia,9999);
                     ds.send(dp);
                     ds.close();
                 }catch (Exception e){

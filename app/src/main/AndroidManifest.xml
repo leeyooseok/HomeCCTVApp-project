@@ -37,23 +37,22 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
+            >
         </activity>
         <activity
             android:name=".CCTVActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
+            >
 
         </activity>
         <activity
             android:name=".MyHomeCCTV"
             android:exported="true"
-            android:screenOrientation="portrait">
+            >
         </activity>
         <activity
             android:name=".CCTVControlActivity"
-            android:exported="true"
-            android:screenOrientation="landscape">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -61,7 +60,7 @@
         <activity
             android:name=".LightControlActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
+            >
         </activity>
     </application>
 

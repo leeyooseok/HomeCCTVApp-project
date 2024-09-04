@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         // 각 버튼에 대한 참조 초기화
         cctvButton = findViewById(R.id.cctvControlButton);
         lightControlButton = findViewById(R.id.lightControlButton);
-        temperatureCheckButton = findViewById(R.id.temperatureCheckButton);
+//        temperatureCheckButton = findViewById(R.id.temperatureCheckButton);
 
         // CCTV 제어 화면으로 이동
         cctvButton.setOnClickListener(v -> {
