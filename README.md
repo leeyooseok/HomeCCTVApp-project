@@ -22,18 +22,21 @@
 --------------------------------------------
 
 ## 기술 스택 🛠️
-<img src="https://img.shields.io/badge/android%20studio-346ac1?style=for-the-badge&logo=android%20studio&logoColor=white">
- **Android Studio**는 안드로이드 애플리케이션 개발을 위한 통합 개발 환경(IDE)으로, 제가 만든 애플리케이션의 개발, 디버깅, 빌드, 그리고 실행을 위한 핵심 역할을 합니다.<br>
+<br>
+
+[![Android Studio](https://img.shields.io/badge/Android_Studio-346ac1?style=for-the-badge&logo=android-studio&logoColor=white)](https://github.com/leeyooseok/HomeCCTVApp-Android.git)
+
+Android Studio는 안드로이드 애플리케이션 개발을 위한 통합 개발 환경(IDE)으로, 제가 만든 애플리케이션의 개발, 디버깅, 빌드, 그리고 실행을 위한 핵심 역할을 합니다.<br>
 이 프로젝트에서는 CCTV영상 스트리밍,버튼으로 카메라제어,음성으로 카메라제어,조명제어가 가능하도록 구현하였습니다.<br>
-애플리케이션은 UDP 통신을 통해 명령어를 네트워크로 전송하고, 아두이노와의 상호작용을 관리하는 역할을 담당합니다.
+애플리케이션은 UDP 통신을 통해 명령어를 네트워크로 전송하고, 아두이노와의 상호작용을 관리하는 역할을 담당합니다.<br>
 
 <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
 ARDUINO에서는 카메라의 움직임을 제어하는 모터와 조명의 밝기를 제어하는 LED핀을 안드로이드 스튜디오로부터 명령어로 받아서 지정된 명령을 수행하도록 구현하였습니다.<br>
-아두이노에서 움직임을 구현하는 것은 크게 어렵지 않으나 기능을 하는 핀번호를 잘 확인하고 원하는 움직임을 구현하도록 체크해야합니다.
+아두이노에서 움직임을 구현하는 것은 크게 어렵지 않으나 기능을 하는 핀번호를 잘 확인하고 원하는 움직임을 구현하도록 체크해야합니다.<br>
 <br>
-<br>
-<img src="https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white">
-https://github.com/leeyooseok/UDPServer.git<br>
+
+[![IntelliJ IDEA](https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)](https://github.com/leeyooseok/UDPServer.git)
+
 IntelliJ에서는  안드로이드 스튜디오와 아두이노 간의 연결을 담당하는 서버로, UDP 프로토콜을 통해 데이터를 송수신합니다.<br> 
 비연결형 통신 방식을 사용하여 빠르고 가벼운 데이터 전송을 가능하게 하며, 이를 통해 안드로이드에서 보내는 명령을 아두이노로 전달하고 그 결과를 확인하는 과정을 구현했습니다.<br>
 서버의 포트 설정이 정확해야 하며, 이를 통해 명령이 문제없이 전송되도록 했습니다.
