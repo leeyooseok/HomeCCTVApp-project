@@ -9,6 +9,9 @@
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
 </div>
 
+[![Video Title](https://img.youtube.com/vi/동영상ID/0.jpg)](https://www.youtube.com/watch?v=동영상ID)
+
+
 ## 프로젝트 개요 💡
 이 프로젝트의 HomeCCTV프로그램을 구현한 프로젝트로 안드로이드 스튜디오를 통해 만든 어플리케이션을 통해 집안의 카메라를 제어하여 어디서나 실시간으로 모니터링을 통해 보안을 강화하고 집안의 조명을 제어하여 편리성을 제공하는것이 목표입니다.<br>
 
