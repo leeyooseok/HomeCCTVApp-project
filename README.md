@@ -9,6 +9,8 @@
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
 </div>
 
+<div align="center">
+  
 [![Video Title](https://img.youtube.com/vi/AlVvSRTxmKs/0.jpg)](https://www.youtube.com/watch?v=AlVvSRTxmKs)
 
 
