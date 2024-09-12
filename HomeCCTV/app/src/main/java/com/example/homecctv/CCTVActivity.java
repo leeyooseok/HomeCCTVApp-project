@@ -3,6 +3,7 @@ package com.example.homecctv;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +14,10 @@ public class CCTVActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cctv);
+        // 뒤로가기 버튼 설정
+        Button buttonBack = findViewById(R.id.backmainBTN);
+
+        buttonBack.setOnClickListener(v -> openMainlActivity());
 
         StreamCCTV cctvSurfaceView1 = findViewById(R.id.cctvSurfaceView1);
         StreamCCTV cctvSurfaceView2 = findViewById(R.id.cctvSurfaceView2);
@@ -38,6 +43,12 @@ public class CCTVActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CCTVControlActivity.class);
         intent.putExtra("streamUrl", url);
         intent.putExtra("cameraIP", IP);
+        startActivity(intent);
+    }
+    private void openMainlActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        // 새 액티비티 시작
         startActivity(intent);
     }
 }
