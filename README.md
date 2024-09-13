@@ -8,10 +8,13 @@
 <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white">
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
 </div>
+<br>
 
 <div align="center">
   
 [![Video Title](https://img.youtube.com/vi/AlVvSRTxmKs/0.jpg)](https://www.youtube.com/watch?v=AlVvSRTxmKs)
+
+*이미지 클릭시 유튜브 동영상으로 이동*
 
 
 ## 프로젝트 개요 💡
