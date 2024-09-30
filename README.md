@@ -12,7 +12,8 @@
 
 <div align="center">
   
-[![Video Title](https://img.youtube.com/vi/6f63qniM9cY/0.jpg)](https://www.youtube.com/watch?v=6f63qniM9cY)
+[![Video Title](https://img.youtube.com/vi/SmFYiiZQVbI/0.jpg)](https://www.youtube.com/shorts/SmFYiiZQVbI))<br>
+
 
 *이미지 클릭시 유튜브 동영상으로 이동*
 
